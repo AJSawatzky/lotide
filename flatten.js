@@ -1,3 +1,4 @@
+// eqArrays function
 const eqArrays = (firstArray, secondArray) => {
   if(firstArray.length !== secondArray){
     return false;
@@ -10,7 +11,7 @@ const eqArrays = (firstArray, secondArray) => {
 }
 
 
-// FUNCTION IMPLEMENTATION
+// assertEqual function
 const assertEqual = function(actual, expected) {
   
   if (eqArrays (actual === expected)) {
@@ -21,6 +22,8 @@ const assertEqual = function(actual, expected) {
   }
 };
 
+
+// flatten function
 const flatten = (firstArray, secondArray) => {
   const newArray = firstArray.concat(secondArray);
   return newArray
