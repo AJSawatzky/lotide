@@ -23,3 +23,5 @@ const assertEqual = function(actual, expected) {
 
 
 assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => should PASS
+
+module.exports = eqArrays;
