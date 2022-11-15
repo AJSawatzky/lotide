@@ -1,7 +1,5 @@
 // FUNCTION IMPLEMENTATION
-const assertEqual = function(actual, expected) {
-  
-};
+const assertEqual = require('./assertEqual');
 
 const head = function(array) {
   let first = array[0];
