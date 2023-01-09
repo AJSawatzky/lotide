@@ -1,32 +1,22 @@
-//assertEqual function template/example
-const assertEqual = function(actual, expected) {
-  
-  if (actual === expected) {
-    console.log(`🛑🛑🛑 Assertion Passed:, ${actual}, '===', ${expected}`);
-    
-  } else {
-    console.log(`✅✅✅ Assertion Failed:, ${actual}, '!==',  ${expected}`);
-  }
-};
-
-
 // countLetters attempt
-function countLetters(inputString) {
+const countLetters = function(inputString) {
   const returnObject = {};
 
   // loop over input string
-  for (let i = 0; i < inputString.length; i++) {
+  for (const element of phrase) {
     // has been seen before?
-    if (returnObject.hasOwnProperty(inputString[i])) {
+    if (element !== ' ') {
       // increase count by 1
-      returnObject[inputString[i]] += 1;
+      if (returnObject(element)) {
+        returnObject[element]++;
     } else {
       // add it to the object with a count of 1
-      returnObject[inputString[i]] = 1;
+      returnObject[element] = 1;
     }
   }
+}
 
   return returnObject;
 }
 
-console.log(countLetters('Lighthouse'));
+module.exports = countLetters;
