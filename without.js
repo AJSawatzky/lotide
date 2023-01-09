@@ -1,34 +1,16 @@
-const eqArrays = (firstArray, secondArray) => {
-  if(firstArray.length !== secondArray){
-    return false;
-  }
-  for(let i = 0; i < firstArray.length; i++){
-    if(firstArray[i] !== secondArray[i]){
-      return false;
+//returns a subset `array1`, removing from it the elements from `array2`.
+
+const without = function(array1, array2) {
+  let answer = [];
+  for (let i = 0; i < array.length; i++) {
+    answer.push(array1[i]);
+    for (let j = 0; j < array.length; j++) {
+      if (array1[i] === array2[j]) {
+        answer.pop();
+      }    
     }
-  }return true;
-}
-
-
-// FUNCTION IMPLEMENTATION
-const assertEqual = function(actual, expected) {
-  
-  if (eqArrays (actual === expected)) {
-    console.log(`✅✅✅ Assertion Passed:, ${actual}, '===', ${expected}`);
-    
-  } else {
-    console.log(`🛑🛑🛑Assertion Failed:, ${actual}, '!==',  ${secondArray}`);
   }
+  return answer;
 };
 
-const without = (source, itemsToRemove) => {
-  
-  if(source === itemsToRemove){ 
-    return source.slice(itemsToRemove); 
-  
-  }else{
-    return source.slice(itemsToRemove);
-  }
-};
-
-
+module.exports = without;

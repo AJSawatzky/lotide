@@ -1,11 +1,14 @@
+//returns slice of array with elements taken from the beginning
+
 const takeUntil = function(array, callback) {
   let newArray = [];
-  for (let element of array) {
-    if (!callback(element)) {
-      newArray.push(element);    
-    } else {
-      break;
-    }
+  let i = 0;
+  let element = array[i] 
+
+  while (!callback(element) && i < array.length) {
+    newArray.push(element);
+      i++;
+    element = array[i];
   }
   return newArray;
 };
