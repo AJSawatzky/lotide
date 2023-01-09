@@ -1,4 +1,4 @@
-//const assertEqual = require("./assertEqual");
+//takes in an object and callback and returns the first key that meets the criteria specified in callback.
 
 const findKey = function(object, callback) {
  let keys = Object.keys(object);

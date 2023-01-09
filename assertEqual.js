@@ -1,4 +1,4 @@
-// FUNCTION IMPLEMENTATION
+// Checks if primitive data types `actual` === `expected`, don't return only prints to console.log
 const assertEqual = function(actual, expected) {
   
   if (actual === expected) {

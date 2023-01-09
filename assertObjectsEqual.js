@@ -1,6 +1,8 @@
+//takes in 2 objects and returns true if they are equal and false otherwise.
+
 const eqObjects = require('./eqObjects');
 
-//function implement
+//Checks if object "actual" === "expected"
 const assertObjectsEqual = function(actual, expected) {
   const inspect = require('util').inspect
   if (eqObjects(actual === expected)) {

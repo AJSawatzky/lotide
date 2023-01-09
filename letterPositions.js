@@ -1,24 +1,4 @@
-const eqArrays = (firstArray, secondArray) => {
-  if(firstArray.length !== secondArray){
-    return false;
-  }
-  for(let i = 0; i < firstArray.length; i++){
-    if(firstArray[i] !== secondArray[i]){
-      return false;
-    }
-  }return true;
-}
-
-const assertArraysEqual = function(actual, expected) {
-  
-  if (eqArrays (actual === expected)) {
-    console.log(`✅✅✅ Assertion Passed:, ${actual}, '===', ${expected}`);
-    
-  } else {
-    console.log(`🛑🛑🛑 Assertion Failed:, ${actual}, '!==',  ${expected}`);
-  }
-};
-
+//takes in a string and returns all indices of letter positions in the string.
 
 const letterPositions = function(string) {
   const answer = {};

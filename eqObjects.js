@@ -1,3 +1,5 @@
+//takes in 2 objects and return true if they are equal and false otherwise.
+
 const eqArrays = require('./eqArrays')
 
 const eqObjects = function(obj1, obj2) {

@@ -1,4 +1,5 @@
-// countLetters attempt
+//return an object that enumerates each letter of "phrase"
+
 const countLetters = function(inputString) {
   const returnObject = {};
 

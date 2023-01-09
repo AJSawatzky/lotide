@@ -1,7 +1,7 @@
 const eqArrays = require('./eqArrays');
 
 
-// FUNCTION IMPLEMENTATION
+// Checks if Array "actual" === "expected"  
 const assertArraysEqual = function(actual, expected) {
   
   if (eqArrays (actual === expected)) {
