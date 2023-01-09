@@ -1,5 +1,12 @@
-  const tail = function(array) {
-    return array.length > 2 ? array.slice(1) : [];
+//returns all itmes after the head of `array` as an array
+
+const tail = function(array) {
+  let answer = [];
+    for (let i = 0; i < array.length; i++) {
+      answer.push(array[i]);
+      
+    }
+    return answer;
   };
 
 module.exports = tail;

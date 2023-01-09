@@ -1,19 +1,19 @@
-const eqArrays = require('./eqArrays')
-
-// FUNCTION IMPLEMENTATION
-const assertEqual = require('./assertEqual');
+//returns the middle of `array` (one item if odd, two items if even, none if `array.length <=2`)
 
 const middle = function(array){
-    if (array.length % 2 === 0) {
-      var mid1 = array[Math.floor((array.length - 1) / 2)];
-      var mid2 = array[Math.floor((array.length) / 2)];
-      return [mid1, mid2];
-        
-  }else {
-    var mid3 = array[Math.floor(array.length / 2)];
-    return [mid3];
-    }
+  let answer = [];
+    if (array.length < 3) {
+  return answer;
+}
+
+  let mid = Math.round(array.length / 2);
+    answer.push(array[mid - 1]);
+
+  if (array.length % 2 === 0) {
+    answer.push(array[mid]);
   }
+  return answer;
+};
 
 module.exports = middle;
 
