@@ -1,22 +1,20 @@
 //takes in a string and returns all indices of letter positions in the string.
 
-const letterPositions = function(string) {
-  const answer = {};
-    
-  for (let i = 0; i < sentence.length; i++) {
-    let element = sentence[i];
+const letterPositions = function(sentence) {
+  const results = {};
 
-    if (element !== ' ') {
-      if (answer.hasOwnProperty(element)) {
-        answer[element].push(i);
-      } else {
-        answer[element] = [];
-        answer[element].push(i);
-      }
+  const noSpaceString = sentence.replace(/ /g, "");
+
+  for (let i = 0; i < noSpaceString.length; i++) {
+    if (results[noSpaceString[i]]) {
+      results[noSpaceString[i]].push(i);
+    } else {
+      results[noSpaceString[i]] = [];
+      results[noSpaceString[i]].push(i);
     }
   }
 
-  return answer;
+  return results;
 };
 
 module.exports = letterPositions;

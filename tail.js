@@ -1,12 +1,11 @@
 //returns all itmes after the head of `array` as an array
 
 const tail = function(array) {
-  let answer = [];
-    for (let i = 0; i < array.length; i++) {
-      answer.push(array[i]);
-      
-    }
-    return answer;
-  };
+  if (array === undefined) {
+    return undefined;
+  }
+  const tailArray = array.slice(1);
+  return tailArray;
+};
 
 module.exports = tail;

@@ -1,23 +1,20 @@
 //return an object that enumerates each letter of "phrase"
 
-const countLetters = function(inputString) {
-  const returnObject = {};
+const countLetters = function(stringValue) {
+  const result = {};
+  
+  const noSpaceString = stringValue.replace(/ /g, "");
 
-  // loop over input string
-  for (const element of phrase) {
-    // has been seen before?
-    if (element !== ' ') {
-      // increase count by 1
-      if (returnObject(element)) {
-        returnObject[element]++;
+  for (let letter of noSpaceString) {
+    
+    if (result[letter]) {
+      result[letter] += 1;
     } else {
-      // add it to the object with a count of 1
-      returnObject[element] = 1;
+      result[letter] = 1;
     }
   }
-}
 
-  return returnObject;
-}
+  return result;
+};
 
 module.exports = countLetters;
