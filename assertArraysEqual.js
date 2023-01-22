@@ -1,16 +1,22 @@
-const eqArrays = require('./eqArrays');
+const eqArrays = require("./eqArrays");
 
-
-// Checks if Array "actual" === "expected"  
+//AssertEqual Implementation
 const assertArraysEqual = function(actual, expected) {
-  
-  if (eqArrays (actual === expected)) {
-    console.log(`✅✅✅ Assertion Passed:, ${actual}, '===', ${expected}`);
-    
+  //emojis
+  const emoji = require('node-emoji');
+  const alert = emoji.get('x');
+  const pass = emoji.get('white_check_mark');
+
+  //messages
+  const errorMessage = alert + alert + alert + " Assertion Failed:";
+  const successMessage = pass + pass + pass + " Assertion Passed:";
+
+  //comparison
+  if (eqArrays(actual, expected)) {
+    console.log(`${successMessage} ${actual} === ${expected}`);
   } else {
-    console.log(`🛑🛑🛑 Assertion Failed:, ${actual}, '!==',  ${expected}`);
+    console.log(`${errorMessage} ${actual} !== ${expected}`);
   }
 };
-
 
 module.exports = assertArraysEqual;
