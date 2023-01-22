@@ -9,7 +9,7 @@ describe("#eqObjects", () => {
   let expectedAnswer = true;
 
   it(`returns ${expectedAnswer} when comparing two equal objects with different order`, () => {
-    assert.strictEqual(answer, expectedAnswer);
+    assert.deepEqual(answer, expectedAnswer);
   });
 
   const abc = { a: "1", b: "2", c: "3" };
@@ -17,7 +17,7 @@ describe("#eqObjects", () => {
   expectedAnswer = false;
   
   it(`returns ${expectedAnswer} when comparing two unequal objects`, () => {
-    assert.strictEqual(answer, expectedAnswer);
+    assert.deepEqual(answer, expectedAnswer);
   });
 
   const cd = { c: "1", d: ["2", 3] };
@@ -26,7 +26,7 @@ describe("#eqObjects", () => {
   expectedAnswer = true;
 
   it(`returns ${expectedAnswer} when comparing two equal objects with arrays as values`, () => {
-    assert.strictEqual(answer, expectedAnswer);
+    assert.deepEqual(answer, expectedAnswer);
   });
 
   const cd2 = { c: "1", d: ["2", 3, 4] };
@@ -34,7 +34,7 @@ describe("#eqObjects", () => {
   expectedAnswer = false;
   
   it(`returns ${expectedAnswer} when comparing two unequal objects with arrays as values`, () => {
-    assert.strictEqual(answer, expectedAnswer);
+    assert.deepEqual(answer, expectedAnswer);
   });
 
 });

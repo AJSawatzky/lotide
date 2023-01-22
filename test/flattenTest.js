@@ -1,25 +1,15 @@
+const flatten = require("../flatten");
 const assert = require('chai').assert;
-const flatten = require('../flatten');
 
-let array = flatten([1, 2, [3, 4], 5, [6]]);
-let flattened = [1, 2, 3, 4, 5, 6];
-
+// mocha tests
 describe("#flatten", () => {
-  it("returns [1, 2, 3, 4, 5, 6] after flattening [1, 2, [3, 4], 5, [6]]", () => {
-    assert.deepEqual(array, flattened);
-  });
-
-  array = flatten([1, 2, 3, 4, 5]);
-  flattened = [1, 2, 3, 4, 5];
-
-  it("returns [1, 2, 3, 4, 5] after flattening [1, 2, 3, 4, 5]", () => {
-    assert.deepEqual(array, flattened);
+  
+  it("returns [1, 2, 3, 4, 5, 6] for [[1, 2, [3, 4], 5, [6]]", () => {
+    assert.deepEqual(flatten([1, 2, [3, 4], 5, [6]]), [1, 2, 3, 4, 5, 6]);
   });
   
-  array = flatten([[1],[2],[3,4,5],[6],[7],[8,9]]);
-  flattened = [1,2,3,4,5,6,7,8,9];
-  
-  it("returns [1, 2, 3, 4, 5, 6, 7, 8, 9] after flattening [[1],[2],[3, 4, 5],[6],[7],[8, 9]]", () => {
-    assert.deepEqual(array, flattened);
+  it("returns [['Im', 'a', 'happy', 'happy', 'happy', 'dog'] for ['Im', 'a', ['happy', 'happy', 'happy'], 'dog']", () => {
+    assert.deepEqual(flatten(["Im", "a", ["happy", "happy", "happy"], "dog"]),["Im", "a", "happy", "happy", "happy", "dog"]);
   });
-})
+
+});
